@@ -32,7 +32,8 @@ const modules = [
 export default function Home() {
   const navigate = useNavigate()
   const { user, logout } = useAuth()
-  const name = user?.displayName ?? user?.email?.split('@')[0] ?? 'du'
+  const rawName = user?.displayName ?? user?.email?.split('@')[0] ?? 'du'
+  const name = rawName.split(/[._\s]/)[0].replace(/^\w/, c => c.toUpperCase())
 
   return (
     <div className="min-h-svh bg-gradient-to-b from-sky-100 to-indigo-100 flex flex-col items-center justify-center p-6 gap-8">
