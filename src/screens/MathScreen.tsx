@@ -317,19 +317,19 @@ export default function MathScreen() {
               </h1>
               <p className="text-indigo-400 mt-1 text-sm">{t('Wähle ein Thema', 'Choose a topic')}</p>
             </div>
-            <div className="flex-1 px-4 pb-6 grid grid-cols-2 gap-4 content-start overflow-y-auto">
+            <div className="flex-1 px-4 pb-4 grid grid-cols-2 gap-3 content-start overflow-y-auto">
               {class2Topics.map((tp, i) => {
                 const best = highScores[tp.id] ?? 0
                 return (
                   <motion.button
                     key={tp.id}
                     onClick={() => selectTopic(tp)}
-                    className="bg-white rounded-3xl p-4 flex flex-col items-center gap-2 shadow-md border border-indigo-100 active:scale-95 transition-transform min-h-[140px] justify-center"
+                    className="bg-white rounded-2xl p-3 flex flex-col items-center gap-1.5 shadow-md border border-indigo-100 active:scale-95 transition-transform min-h-[110px] justify-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.06 }}
                   >
-                    <span className="text-4xl">{tp.emoji}</span>
+                    <span className="text-3xl">{tp.emoji}</span>
                     <p className="font-bold text-indigo-700 text-center text-sm leading-tight">
                       {lang === 'de' ? tp.label.de : tp.label.en}
                     </p>
@@ -348,7 +348,7 @@ export default function MathScreen() {
               {/* Advanced / Aufgabe tile */}
               <motion.button
                 onClick={() => navigate('/math/advanced')}
-                className="col-span-2 bg-gradient-to-r from-orange-400 to-amber-400 rounded-3xl p-4 flex items-center gap-4 shadow-md active:scale-95 transition-transform min-h-[80px]"
+                className="col-span-2 bg-gradient-to-r from-orange-400 to-amber-400 rounded-2xl p-3 flex items-center gap-4 shadow-md active:scale-95 transition-transform min-h-[64px]"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: class2Topics.length * 0.06 }}

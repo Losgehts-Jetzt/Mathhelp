@@ -4,7 +4,7 @@ export default function LanguageScreen() {
   const navigate = useNavigate()
   return (
     <div className="min-h-svh bg-gradient-to-b from-emerald-100 to-teal-100 flex flex-col items-center justify-center p-6 gap-6">
-      <button onClick={() => navigate('/')} className="self-start text-teal-600 text-lg font-semibold">
+      <button onClick={() => navigate('/')} className="text-teal-600 text-lg font-semibold px-6 py-3 rounded-2xl border-2 border-teal-300 bg-white active:bg-teal-50">
         ← Zurück
       </button>
       <span className="text-7xl">✏️</span>
