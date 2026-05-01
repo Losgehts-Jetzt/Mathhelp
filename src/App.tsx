@@ -4,6 +4,7 @@ import { AuthProvider, useAuth } from './context/AuthContext'
 import LoginScreen from './screens/LoginScreen'
 import Home from './screens/Home'
 import MathScreen from './screens/MathScreen'
+import AdvancedMathScreen from './screens/AdvancedMathScreen'
 import LanguageScreen from './screens/LanguageScreen'
 import StoriesScreen from './screens/StoriesScreen'
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/login" element={<PublicRoute><LoginScreen /></PublicRoute>} />
           <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path="/math" element={<PrivateRoute><MathScreen /></PrivateRoute>} />
+          <Route path="/math/advanced" element={<PrivateRoute><AdvancedMathScreen /></PrivateRoute>} />
           <Route path="/language" element={<PrivateRoute><LanguageScreen /></PrivateRoute>} />
           <Route path="/stories" element={<PrivateRoute><StoriesScreen /></PrivateRoute>} />
         </Routes>

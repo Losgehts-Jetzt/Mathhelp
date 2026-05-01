@@ -344,6 +344,25 @@ export default function MathScreen() {
                   </motion.button>
                 )
               })}
+
+              {/* Advanced / Aufgabe tile */}
+              <motion.button
+                onClick={() => navigate('/math/advanced')}
+                className="col-span-2 bg-gradient-to-r from-orange-400 to-amber-400 rounded-3xl p-4 flex items-center gap-4 shadow-md active:scale-95 transition-transform min-h-[80px]"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: class2Topics.length * 0.06 }}
+              >
+                <span className="text-4xl">📸</span>
+                <div className="text-left">
+                  <p className="font-bold text-white text-base leading-tight">
+                    {t('Aufgaben', 'Advanced Problems')}
+                  </p>
+                  <p className="text-xs text-orange-100 leading-tight mt-0.5">
+                    {t('Foto hochladen → KI generiert Aufgaben', 'Upload photo → AI generates problems')}
+                  </p>
+                </div>
+              </motion.button>
             </div>
           </FadeView>
         )}
