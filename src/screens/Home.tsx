@@ -49,7 +49,7 @@ export default function Home() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
       >
-        Hallo, {name}! 👋
+        Hallo {name}! 👋
       </motion.h1>
 
       <div className="flex flex-col gap-5 w-full max-w-sm">
